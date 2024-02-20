@@ -30,9 +30,7 @@ SECRET_KEY = 'django-insecure-@$yfxxhv6v*)s^(q&e99kbe5=x1z$f1pn1dn^ku=dss4)&73_p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://25d8-102-0-4-206.ngrok-free.app/',
-                 ' http://127.0.0.1:8000/',
-                 '25d8-102-0-4-206.ngrok-free.app']
+ALLOWED_HOSTS = ["*", "https:\\DavisWere.pythonanywhere.com" ]
 
 
 # Application definition
@@ -50,6 +48,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'drf_standardized_errors',
+    'whitenoise',
      'whitenoise.runserver_nostatic',
 ]
 
