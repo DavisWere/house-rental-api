@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = 'django-insecure-@$yfxxhv6v*)s^(q&e99kbe5=x1z$f1pn1dn^ku=dss4)&73_p'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*", "https:\\DavisWere.pythonanywhere.com" ]
+ALLOWED_HOSTS = ["*", "https:\\DavisWere.pythonanywhere.com"]
 
 
 # Application definition
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_standardized_errors',
     'whitenoise',
-     'whitenoise.runserver_nostatic',
+    'whitenoise.runserver_nostatic',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-CSRF_TRUSTED_ORIGINS=['https://25d8-102-0-4-206.ngrok-free.app']
+CSRF_TRUSTED_ORIGINS = ['https://25d8-102-0-4-206.ngrok-free.app']
 ROOT_URLCONF = 'HouseRentalApi.urls'
 
 CORS_ALLOW_ALL_ORIGINS = True
